@@ -1,6 +1,6 @@
 import React, { useState, ReactElement } from 'react';
 import Test from './Components/Test';
-import EpubViewer from './Components/Epub/EpubViewer';
+import EpubViewer from './Components/Epub/0_EpubViewer';
 
 // Main Component
 const App: React.FC = () => {
@@ -18,7 +18,7 @@ const App: React.FC = () => {
       <button onClick={addTestComponent}>Add Test Component</button>
       {testComponents}
 
-      <EpubViewer />
+      <EpubViewer bookUrl='https://s3.amazonaws.com/moby-dick/moby-dick.epub'/>
     </div>
   );
 };
