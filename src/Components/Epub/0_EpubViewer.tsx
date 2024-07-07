@@ -1,8 +1,8 @@
-// EpubViewer.tsx
 import React, { useEffect, useRef, useState } from "react";
 import ePub, { Rendition } from "epubjs";
 import "./Style.scss";
 import EpubToc from "./TocHandel/EpubToc";  // 导入新组件
+import FontSizeSelector from "./Functions/FontSizeSelector";
 
 interface EpubViewerProps {
   bookUrl: string;
@@ -105,6 +105,8 @@ const EpubViewer: React.FC<EpubViewerProps> = ({ bookUrl }) => {
       <div id="main">
         <div id="viewer" ref={viewerRef}></div>
       </div>
+
+      <FontSizeSelector rendition={rendition} />
 
       <div id="pagination">
         <a id="prev" href="#prev" className="arrow">...</a>
